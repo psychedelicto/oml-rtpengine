@@ -64,11 +64,11 @@ variable "ssh_keys" {
   description = "(Optional) A list of SSH IDs or fingerprints to enable in the format [12345, 123456]. To retrieve this info, use a tool such as curl with the DigitalOcean API, to retrieve them."
 }
 
-# variable "user_data" {
-#   type        = string
-#   default     = ""
-#   description = "(Optional) A string of the desired User Data for the Droplet."
-# }
+variable "user_data" {
+  type        = string
+  default     = ""
+  description = "(Optional) A string of the desired User Data for the Droplet."
+}
 
 variable "vpc_uuid" {
   type        = string

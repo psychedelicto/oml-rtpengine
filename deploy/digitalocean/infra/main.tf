@@ -24,9 +24,8 @@ resource "digitalocean_droplet" "main" {
   monitoring         = var.monitoring
   private_networking = var.private_networking
   ssh_keys           = var.ssh_keys
+  user_data          = var.user_data
   vpc_uuid           = var.vpc_uuid
-  user_data          = templatefile("./user_data.tpl", {
-  })
 
   tags               = [
     digitalocean_tag.tenant.id,
