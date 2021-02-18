@@ -25,7 +25,7 @@ resource "digitalocean_droplet" "main" {
   private_networking = var.private_networking
   ssh_keys           = var.ssh_keys
   vpc_uuid           = var.vpc_uuid
-  user_data          = templatefile("../cloud-init/user_data.tpl", {
+  user_data          = templatefile("./user_data.tpl", {
   })
 
   tags               = [
